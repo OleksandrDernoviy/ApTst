@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./sass/index.scss" />  
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <section firsty class="test first-js">
+      <form action="submit" class="js-search-form search-form">
+        <div class="form-group">
+          <label for="city" class="label">Введіть назву міста:</label>
+          <input type="text" name="city" class="search-input" required />
+        </div>
+        <div class="form-group">
+          <label for="days" class="label">Виберіть кількість днів:</label>
+          <div class="input-group">
+            <select name="days" class="days-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="search-button" type="submit">Пошук</button>
+          </div>
+        </div>
+      </form>
+    <ul class="js-list weather-cards"></ul>
+    <script type="module" src="./index.js"></script>
+    </section>
+
+  
   </body>
 </html>
